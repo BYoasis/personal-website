@@ -2,6 +2,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "bash scripts/deploy-site.sh",
     "lint": "next lint"
   },
   "dependencies": {
