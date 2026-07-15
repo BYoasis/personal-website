@@ -58,7 +58,7 @@ const projects = [
     type: "Family Tool / Stock Dashboard / Daily Market Companion",
     desc: "一个为妈妈定制的每日市场陪伴工具，把分散的行情、板块、新闻和个股信息整理成更容易理解的日常工作台。项目目标不是做复杂交易系统，而是帮助非专业用户快速理解今天市场发生了什么、哪些板块值得关注、风险在哪里。",
     highlights: ["来自真实家庭需求", "面向非专业用户的信息设计", "每日市场信息整合", "板块趋势、新闻、个股动态归纳", "让数据变成可读、可判断的日常工具"],
-    href: "/",
+    href: "http://momstock.byydoujr.cn/",
     visual: "/assets/scene-sunset.png",
   },
 ];
