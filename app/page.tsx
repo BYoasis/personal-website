@@ -34,7 +34,7 @@ const projects = [
     type: "Overseas Growth / Market Intelligence / API Dashboard",
     desc: "一个面向海外增长和营销决策的实时情报系统。它通过 API 自动获取公开市场数据，并经过关键词过滤、质量评分和策略归纳，自动抓取和筛选海外市场中与 Insta360、GoPro、DJI、运动相机、360 相机相关的公开信息，把零散的新闻、竞品信号和创作者内容整理成一个可以快速判断方向的工作台。",
     highlights: ["API 自动获取公开市场数据", "关键词过滤与质量评分", "竞品、新闻、创作者内容监测", "将零散信息转化为市场判断和行动建议", "已沉淀可复用 Dashboard Workflow"],
-    href: "http://byydoujr.cn/insta360/",
+    href: "/insta360/",
     visual: "/assets/scene-code.png",
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     type: "Personal iOS App / Habit / Fitness / Journal / Widget",
     desc: "一个像素风个人生活管理 App，围绕健身、打卡、日记、照片记录、Widget 和个人角色元素，探索如何用 AI Coding 把个人习惯系统产品化。",
     highlights: ["个人习惯与成长记录", "健身打卡与照片记录", "iOS Widget", "像素风个人 IP 元素", "从真实生活需求出发的长期项目"],
-    href: "http://byydoujr.cn/garden/",
+    href: "/garden/",
     visual: "/assets/scene-hamster.png",
   },
   {
@@ -50,7 +50,7 @@ const projects = [
     type: "Quiz / H5 Campaign / Community Engagement",
     desc: "一组面向线上活动和社区传播的小型互动实验，包括类 MBTI 测试、角色匹配测试、活动页和问卷玩法。目标是快速验证轻量互动内容在社群传播、活动引流和用户参与中的复用价值。",
     highlights: ["类 MBTI / 角色匹配测试", "适合社群传播的小型互动页", "可用于游戏社区、品牌活动、问卷引流", "快速部署到 GitHub Pages / Vercel", "运营活动经验可复用"],
-    href: "http://byydoujr.cn/quiz/",
+    href: "/quiz/",
     visual: "/assets/scene-journey.png",
   },
   {
@@ -58,7 +58,7 @@ const projects = [
     type: "Family Tool / Stock Dashboard / Daily Market Companion",
     desc: "一个为妈妈定制的每日市场陪伴工具，把分散的行情、板块、新闻和个股信息整理成更容易理解的日常工作台。项目目标不是做复杂交易系统，而是帮助非专业用户快速理解今天市场发生了什么、哪些板块值得关注、风险在哪里。",
     highlights: ["来自真实家庭需求", "面向非专业用户的信息设计", "每日市场信息整合", "板块趋势、新闻、个股动态归纳", "让数据变成可读、可判断的日常工具"],
-    href: "http://byydoujr.cn/",
+    href: "/",
     visual: "/assets/scene-sunset.png",
   },
 ];
@@ -133,9 +133,9 @@ const ambient = ["/assets/ambient-racket-clean.png", "/assets/ambient-heart-clea
 
 function Card({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
-    <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.45 }} className={`border-2 border-[#2f241c] bg-[#fff8e9] shadow-pixel ${className}`}>
+    <div className={`border-2 border-[#2f241c] bg-[#fff8e9] shadow-pixel ${className}`}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -212,7 +212,7 @@ export default function Home() {
             </div>
           </Card>
 
-          <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="text-center lg:text-left">
+          <div className="text-center lg:text-left">
             <p className="mb-3 inline-block border-2 border-[#2f241c] bg-white px-3 py-1 text-sm font-black shadow-pixel-sm">市场营销学生 · 产品运营 · Vibe Coding Builder</p>
             <h1 className="text-5xl font-black leading-none md:text-7xl">个人网站</h1>
             <p className="mt-4 text-2xl font-bold">把想法做成能用的小系统。</p>
@@ -232,7 +232,7 @@ export default function Home() {
                 </a>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           <div className="grid gap-3">
             {["Projects 04", "Internships 05", "GPA 3.8/4.0", "Current Focus AI Workflow"].map((item) => (
@@ -247,7 +247,6 @@ export default function Home() {
           <Card className="overflow-hidden p-3">
             <div className="mb-3 flex flex-wrap items-center justify-between gap-2 px-2">
               <p className="font-black">BY World Archive</p>
-              <p className="text-xs font-bold text-[#766653]">一张给网站定调的像素海报</p>
             </div>
             <img className="w-full border-2 border-[#2f241c] bg-[#f7edda] object-contain" src="/assets/by-world-banner.png" alt="BY Pixel IP visual banner" />
           </Card>
@@ -298,7 +297,7 @@ export default function Home() {
                 <ul className="mt-4 grid gap-2">
                   {project.highlights.map((item) => <li key={item} className="border-l-4 border-[#e89f38] bg-[#f7edda] px-3 py-2 text-sm font-bold">{item}</li>)}
                 </ul>
-                <a className="mt-5 w-fit border-2 border-[#2f241c] bg-white px-4 py-2 font-black shadow-pixel-sm transition hover:bg-[#e89f38]" href={project.href ?? "#"} target={project.href ? "_blank" : undefined}>
+                <a className="mt-5 w-fit border-2 border-[#2f241c] bg-white px-4 py-2 font-black shadow-pixel-sm transition hover:bg-[#e89f38]" href={project.href ?? "#"}>
                   {project.href ? "Open ↗" : "Coming Soon"}
                 </a>
               </Card>
