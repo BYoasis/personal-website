@@ -107,7 +107,7 @@ const hobbies = [
   ["羽毛球", "日常运动之一，保持身体状态和专注力。", "/assets/element-badminton.png"],
   ["电吉他 / 音乐", "西交利物浦大学海瑟西兰花乐队队长、电吉他手，组织和参与校内外演出 15+ 场。", "/assets/clean-guitar.png"],
   ["跑步 / 健身", "保持每周运动习惯，用训练对抗焦虑和拖延。", "/assets/cascade-fullbody.png"],
-  ["仓鼠大爷", "生活里的陪伴角色，也是 BY Pixel IP 里的温暖彩蛋。", "/assets/avatar-hamster.png"],
+  ["仓鼠大爷", "生活里的陪伴角色，也是个人网站里的温暖彩蛋。", "/assets/avatar-hamster.png"],
   ["阅读与思考", "保持阅读与记录，关注故事、叙事、人文和自我成长。", "/assets/element-learning.png"],
   ["AI 工具探索", "持续学习 Codex、VS Code、AI Workflow，把想法变成可运行的小系统。", "/assets/element-coding.png"],
   ["出海与全球市场", "关注海外增长、跨文化社区、全球消费品牌和游戏出海。", "/assets/clean-thinking.png"],
@@ -248,7 +248,7 @@ export default function Home() {
             <div className="mb-3 flex flex-wrap items-center justify-between gap-2 px-2">
               <p className="font-black">BY World Archive</p>
             </div>
-            <img className="w-full border-2 border-[#2f241c] bg-[#f7edda] object-contain" src="/assets/by-world-banner.png" alt="BY Pixel IP visual banner" />
+            <img className="w-full border-2 border-[#2f241c] bg-[#f7edda] object-contain" src="/assets/by-world-banner.png" alt="BY 个人网站视觉海报" />
           </Card>
         </section>
 
