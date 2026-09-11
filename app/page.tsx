@@ -65,40 +65,40 @@ const projects = [
 
 const experiences = [
   {
-    company: "Tencent",
-    role: "Market Growth Intern",
-    time: "2026.06 - 至今",
-    direction: "Overseas Publishing / Product Operation / Social Media Operation",
-    desc: "主要参与天美旗下游戏产品的海外发行、产品运营与社媒运营工作，围绕 Discord、Facebook、内容排期、社区活动、玩家反馈和运营资产建设进行执行与优化。",
-    points: ["天美旗下游戏产品海外发行支持", "Discord / Facebook 社媒与社区运营", "海外玩家反馈整理", "社区内容排期与活动贴文", "问卷活动与用户 UID 收集", "社区基建与运营流程优化"],
+    company: "腾讯",
+    role: "市场增长实习生",
+    time: "2026 年 6 月至今",
+    direction: "海外发行 · 产品运营 · 社交媒体运营",
+    desc: "主要参与天美旗下游戏产品的海外发行、产品运营与社交媒体运营，负责内容排期、社区活动、玩家反馈整理和运营资产建设。",
+    points: ["天美旗下游戏产品海外发行支持", "海外社交媒体与社区运营", "海外玩家反馈整理", "社区内容排期与活动文案", "问卷活动与用户编号收集", "社区建设与运营流程优化"],
   },
   {
-    company: "NetEase Games",
-    role: "Overseas Marketing",
-    time: "2026.01 - 2026.05",
-    desc: "以 Discord 社区运营、活动全链路执行和前端搭建为核心，参与海外游戏用户增长与内容生态建设。",
-    points: ["《漫威争锋》活动网页搭建与用户行为数据埋点", "《蛋仔派对》国际服 Discord 主题周活动与玩家二创激励", "每月策划并撰写 20+ 条本地化社区内容", "《燕云十六声》Discord 社区基建优化", "Excel 社区看板与每周数据分析报告", "后续活动参与率提升约 15%"],
+    company: "网易游戏",
+    role: "海外市场实习生",
+    time: "2026 年 1 月至 5 月",
+    desc: "以海外社区运营、活动全流程执行和活动页面搭建为核心，参与海外游戏用户增长与内容生态建设。",
+    points: ["《漫威争锋》活动网页搭建与用户行为数据埋点", "《蛋仔派对》国际服主题周活动与玩家二创激励", "每月策划并撰写 20 余条本地化社区内容", "《燕云十六声》海外社区建设优化", "社区数据看板与每周分析报告", "后续活动参与率提升约 15%"],
   },
   {
-    company: "Shenzhen New Oriental",
-    role: "Market Operation Intern",
-    time: "2025.10 - 2026.01",
+    company: "深圳新东方",
+    role: "新媒体运营实习生",
+    time: "2025 年 10 月至 2026 年 1 月",
     desc: "负责微信公众号与小红书账号内容运营，通过推文、笔记和平台内容优化获取阅读、互动与潜在客户。",
-    points: ["独立运营“大学城 weekly”微信公众号", "撰写发布 20+ 篇推文，累计阅读 10000+", "运营“深圳大学生屠鸭计划”小红书账号", "发布 20+ 篇内容，获赞 2000+，阅读量 10000+", "涨粉 100+"],
+    points: ["独立运营“大学城 weekly”微信公众号", "撰写发布 20 余篇推文，累计阅读量超过 1 万", "运营“深圳大学生屠鸭计划”小红书账号", "发布 20 余篇内容，获赞超过 2000，阅读量超过 1 万", "新增关注用户超过 100 人"],
   },
   {
-    company: "ZEEKR",
-    role: "Market Operation Intern",
-    time: "2025.07 - 2025.10",
+    company: "极氪",
+    role: "市场运营实习生",
+    time: "2025 年 7 月至 10 月",
     desc: "参与汽车门店市场运营、内容策划、线索收集、客户转化与区域市场数据分析。",
-    points: ["负责懂车帝、汽车之家专栏内容规划，上线后专栏订阅量 1w+", "转化潜在客户到店试驾 30+ 人", "协助主播通过小风车转化 50+ 试驾、10+ 成交", "总计销售额超过 300w", "协同落地 10+ 场外展 / 入企 / 异业活动", "累计收集并转化潜在客户线索 2000+", "独立完成 6 份市场调研报告", "完成极氪汽车与金融报价单，成为深圳战区统一报价单模板"],
+    points: ["负责懂车帝、汽车之家专栏内容规划，上线后订阅量超过 1 万", "转化潜在客户到店试驾 30 余人", "协助主播转化 50 余次试驾、促成 10 余笔成交", "总销售额超过 300 万元", "协同落地 10 余场外展、入企及异业活动", "累计收集并转化潜在客户线索超过 2000 条", "独立完成 6 份市场调研报告", "制作汽车与金融报价单，并成为深圳战区统一模板"],
   },
   {
-    company: "Shenzhen Jintaiyi Electronics",
-    role: "Market Operation Consultant Intern",
-    time: "2024.06 - 2024.08",
+    company: "深圳金泰谊电子",
+    role: "市场运营顾问实习生",
+    time: "2024 年 6 月至 8 月",
     desc: "参与消费电子产品外展活动、客户沟通、竞品分析和市场报告，为公司产品宣传与销售目标提供支持。",
-    points: ["参与 5 场线下活动", "沟通客户 500+ 位", "整合 300+ 潜在客户名单", "协助 5G MiFi 产品秋季订单任务完成", "分析 5 款以上竞品功能特性与市场定位", "输出市场优化建议，助力品牌部门制定差异化营销策略"],
+    points: ["参与 5 场线下活动", "沟通客户超过 500 位", "整理 300 余位潜在客户名单", "协助完成 5G 移动热点产品秋季订单任务", "分析 5 款以上竞品的功能特性与市场定位", "输出市场优化建议，协助品牌部门制定差异化营销策略"],
   },
 ];
 
@@ -306,13 +306,13 @@ export default function Home() {
         </section>
 
         <section>
-          <SectionTitle no="03" title="Experience Timeline" sub="实习经历 / Real-world operation quests" />
+          <SectionTitle no="03" title="实习经历" sub="真实业务中的运营实践" />
           <div className="space-y-5">
             {experiences.map((item, index) => (
               <Card key={`${item.company}-${item.time}`} className="p-5">
                 <div className="grid gap-4 lg:grid-cols-[130px_1fr]">
                   <div>
-                    <Badge>QUEST {index + 1}</Badge>
+                    <Badge>经历 {index + 1}</Badge>
                     <p className="mt-3 text-sm font-black text-[#9b5f16]">{item.time}</p>
                   </div>
                   <div>
