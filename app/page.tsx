@@ -82,12 +82,13 @@ const experiences = [
         </p>
       </div>
     ),
-    points: ["天美旗下游戏产品海外发行支持", "海外社交媒体与社区运营", "海外玩家反馈整理", "社区内容排期与活动文案", "问卷活动与用户编号收集", "社区建设与运营流程优化"],
+    points: ["Crownstone Survival 海外发行与产品运营支持", "Discord、Facebook 社区从 0 到 1 搭建", "两端社区规模分别增长至 12,000+ 用户", "独立设计并上线 2 套 Discord Bot", "建立 UGC 攻略征集与内容复用机制", "结合调研、反馈与数据迭代社区服务"],
   },
   {
     company: "网易游戏",
     role: "海外市场实习生",
     time: "2026 年 1 月至 4 月",
+    direction: "全球社区运营 · 用户增长 · 商业化探索",
     desc: (
       <div className="space-y-4">
         <p>以 Discord 全球社区运营为核心，参与海外用户增长、内容生态建设与商业化探索。</p>
@@ -108,12 +109,13 @@ const experiences = [
         </p>
       </div>
     ),
-    points: ["《漫威争锋》活动网页搭建与用户行为数据埋点", "《蛋仔派对》国际服主题周活动与玩家二创激励", "每月策划并撰写 20 余条本地化社区内容", "《燕云十六声》海外社区建设优化", "社区数据看板与每周分析报告", "后续活动参与率提升约 15%"],
+    points: ["《燕云十六声》商业化闭环与流失召回", "第一季度拉动 Discord 侧 100 万元以上流水", "触达 36.6 万流失用户，单次召回 1.5 万人以上", "《蛋仔派对》活动带动频道发言量提升 24.9%", "《漫威争锋》活动页搭建与全链路数据埋点", "持续维护社区数据看板与每周分析报告"],
   },
   {
     company: "深圳新东方",
     role: "新媒体运营实习生",
     time: "2025 年 10 月至 2026 年 1 月",
+    direction: "内容矩阵 · 账号增长 · 留资转化",
     desc: (
       <div className="space-y-4">
         <p>负责垂直社交媒体矩阵运营，围绕内容选题、账号增长和留资转化开展微信公众号及小红书运营。</p>
@@ -127,12 +129,13 @@ const experiences = [
         </p>
       </div>
     ),
-    points: ["独立运营“大学城 weekly”微信公众号", "撰写发布 20 余篇推文，累计阅读量超过 1 万", "运营“深圳大学生屠鸭计划”小红书账号", "发布 20 余篇内容，获赞超过 2000，阅读量超过 1 万", "新增关注用户超过 100 人"],
+    points: ["独立运营“大学城 weekly”微信公众号", "负责“深圳大学生屠鸭计划”小红书账号", "两端累计产出 40 余篇图文内容", "累计获得 2 万以上曝光", "打造单篇 150 余次收藏的高表现笔记", "通过评论与私信建立标准化留资路径"],
   },
   {
     company: "极氪",
     role: "市场运营实习生",
     time: "2025 年 7 月至 10 月",
+    direction: "整合营销 · 销售转化 · 市场洞察",
     desc: (
       <div className="space-y-4">
         <p>聚焦线上线下整合营销与区域市场洞察，通过内容运营和线下渠道拓展支持销售转化。</p>
@@ -146,12 +149,13 @@ const experiences = [
         </p>
       </div>
     ),
-    points: ["负责懂车帝、汽车之家专栏内容规划，上线后订阅量超过 1 万", "转化潜在客户到店试驾 30 余人", "协助主播转化 50 余次试驾、促成 10 余笔成交", "总销售额超过 300 万元", "协同落地 10 余场外展、入企及异业活动", "累计收集并转化潜在客户线索超过 2000 条", "独立完成 6 份市场调研报告", "制作汽车与金融报价单，并成为深圳战区统一模板"],
+    points: ["运营汽车之家、懂车帝及抖音内容矩阵", "垂类内容获得 1 万以上订阅与播放", "协助转化 50 余次试驾及 10 余笔成交", "带动销售额超过 300 万元", "落地 10 余场外展与异业合作，筛选 2000 余条线索", "完成 6 份洞察报告，报价表成为深圳战区模板"],
   },
   {
     company: "深圳金泰谊电子",
     role: "市场运营顾问实习生",
     time: "2024 年 6 月至 8 月",
+    direction: "线下推广 · 客户线索 · 竞品研究",
     desc: (
       <div className="space-y-4">
         <p>围绕消费电子产品的线下推广、客户线索整理和竞品研究，为产品宣传与销售工作提供市场支持。</p>
@@ -165,7 +169,7 @@ const experiences = [
         </p>
       </div>
     ),
-    points: ["参与 5 场线下活动", "沟通客户超过 500 位", "整理 300 余位潜在客户名单", "协助完成 5G 移动热点产品秋季订单任务", "分析 5 款以上竞品的功能特性与市场定位", "输出市场优化建议，协助品牌部门制定差异化营销策略"],
+    points: ["参与 5 场消费电子产品线下活动", "现场沟通客户超过 500 位", "整理 300 余位潜在客户名单", "协助完成 5G 移动热点产品秋季订单任务", "分析 5 款以上竞品的功能与定位", "输出市场建议并支持差异化营销策略制定"],
   },
 ];
 
@@ -376,27 +380,36 @@ export default function Home() {
           <SectionTitle no="03" title="实习经历" sub="真实业务中的运营实践" />
           <div className="space-y-5">
             {experiences.map((item, index) => (
-              <Card key={`${item.company}-${item.time}`} className="p-5">
-                <div className="grid gap-4 lg:grid-cols-[130px_1fr]">
-                  <div>
-                    <Badge>经历 {index + 1}</Badge>
-                    <p className="mt-3 text-sm font-black text-[#9b5f16]">{item.time}</p>
+              <Card key={`${item.company}-${item.time}`} className="overflow-hidden">
+                <div className="border-b-2 border-[#2f241c] bg-[#f3dfbb] p-4 sm:p-5">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <Badge>经历 {String(index + 1).padStart(2, "0")}</Badge>
+                    <p className="text-sm font-black text-[#76501f]">{item.time}</p>
                   </div>
-                  <div>
-                    <div className="flex flex-wrap items-start justify-between gap-3">
-                      <div>
-                        <h3 className="text-2xl font-black">{item.company}</h3>
-                        <p className="mt-1 font-black">{item.role}</p>
-                        {item.direction && <p className="mt-1 text-sm font-bold text-[#9b5f16]">{item.direction}</p>}
-                      </div>
+                  <div className="mt-4 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 className="text-2xl font-black sm:text-3xl">{item.company}</h3>
+                    <p className="font-black text-[#9b5f16]">{item.role}</p>
+                  </div>
+                  {item.direction && <p className="mt-2 text-sm font-bold text-[#685845]">{item.direction}</p>}
+                </div>
+
+                <div className="p-4 sm:p-6">
+                  <div className="max-w-[980px] text-[15px] leading-7 text-[#5f5042] sm:text-base sm:leading-8">{item.desc}</div>
+                  {item.points.length > 0 && (
+                    <div className="mt-6 border-t-2 border-dashed border-[#b99b72] pt-4">
+                      <p className="mb-3 text-xs font-black text-[#9b5f16]">KEY OUTPUTS / 成果速览</p>
+                      <ul className="grid gap-x-8 gap-y-1 md:grid-cols-2">
+                        {item.points.map((point, pointIndex) => (
+                          <li key={point} className="flex min-h-12 items-start gap-3 border-b border-[#dcc9aa] py-3 text-sm font-bold leading-6 sm:text-[15px]">
+                            <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center border border-[#2f241c] bg-[#f6c453] text-[10px] font-black">
+                              {String(pointIndex + 1).padStart(2, "0")}
+                            </span>
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <div className="mt-4 leading-7 text-[#5f5042]">{item.desc}</div>
-                    {item.points.length > 0 && (
-                      <div className="mt-4 grid gap-2 md:grid-cols-2">
-                        {item.points.map((point) => <div key={point} className="border-2 border-[#2f241c] bg-[#f7edda] px-3 py-2 text-sm font-bold">{point}</div>)}
-                      </div>
-                    )}
-                  </div>
+                  )}
                 </div>
               </Card>
             ))}
