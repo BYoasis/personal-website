@@ -66,11 +66,23 @@ const projects = [
 const experiences = [
   {
     company: "腾讯",
-    role: "市场增长实习生",
+    role: "产品运营实习生",
     time: "2026 年 6 月至今",
-    direction: "海外发行 · 产品运营 · 社交媒体运营",
-    desc: "主要参与天美旗下游戏产品的海外发行、产品运营与社交媒体运营，负责内容排期、社区活动、玩家反馈整理和运营资产建设。",
-    points: ["天美旗下游戏产品海外发行支持", "海外社交媒体与社区运营", "海外玩家反馈整理", "社区内容排期与活动文案", "问卷活动与用户编号收集", "社区建设与运营流程优化"],
+    direction: "海外社区运营 · 产品支持 · 运营工具建设",
+    desc: (
+      <div className="space-y-4">
+        <p>
+          在 Market Growth 团队担任产品运营实习生，参与 <strong className="font-black text-[#2f241c]">Crownstone Survival 从 Soft Launch 至 Global Launch 阶段</strong>的海外社区运营与产品支持工作，负责 Discord、Facebook 等海外社区从 0 到 1 的体系建设、用户沟通及运营机制设计。围绕新用户理解、社区活跃与长期内容沉淀，推进新手攻略、FAQ、公告及社区内容规划，并设计 UGC 攻略征集、社区互动活动及内容复用机制，支持 Discord 与 Facebook 社区规模分别从 0 增长至 <strong className="font-black text-[#2f241c]">12,000+ 用户</strong>。
+        </p>
+        <p>
+          结合实际运营场景，<strong className="font-black text-[#2f241c]">独立完成两套 Discord Bot 的方案设计与搭建</strong>，从需求定义、功能拆解、交互流程到上线验证完整推进，将答题、互动、活动管理等运营需求转化为可复用的社区工具，降低活动执行成本并丰富社区互动场景。同时持续参与社区活动机制、玩家参与路径及运营流程优化，使社区运营逐步从单次内容与活动执行，沉淀为可重复使用的运营能力。
+        </p>
+        <p>
+          在用户洞察与运营策略方面，通过社区满意度调研、玩家反馈及运营数据分析，持续识别不同平台用户在内容偏好、活动参与、问题反馈及社区功能上的核心需求。阶段性调研显示，<strong className="font-black text-[#2f241c]">Discord 社区满意度达到 69.8%，Facebook 社区满意度达到 65.2%</strong>；其中 Discord 官方攻略满意度为 <strong className="font-black text-[#2f241c]">77.8%</strong>，官方公告满意度为 <strong className="font-black text-[#2f241c]">71.4%</strong>。进一步结合玩家活动偏好、活跃时段及参与障碍分析，推动内容发布时间、活动触达、Bot 功能及社区服务机制的持续优化，为产品从 Soft Launch 到 Global Launch 阶段的社区增长与用户运营提供支持。
+        </p>
+      </div>
+    ),
+    points: [],
   },
   {
     company: "网易游戏",
@@ -323,10 +335,12 @@ export default function Home() {
                         {item.direction && <p className="mt-1 text-sm font-bold text-[#9b5f16]">{item.direction}</p>}
                       </div>
                     </div>
-                    <p className="mt-4 leading-7 text-[#5f5042]">{item.desc}</p>
-                    <div className="mt-4 grid gap-2 md:grid-cols-2">
-                      {item.points.map((point) => <div key={point} className="border-2 border-[#2f241c] bg-[#f7edda] px-3 py-2 text-sm font-bold">{point}</div>)}
-                    </div>
+                    <div className="mt-4 leading-7 text-[#5f5042]">{item.desc}</div>
+                    {item.points.length > 0 && (
+                      <div className="mt-4 grid gap-2 md:grid-cols-2">
+                        {item.points.map((point) => <div key={point} className="border-2 border-[#2f241c] bg-[#f7edda] px-3 py-2 text-sm font-bold">{point}</div>)}
+                      </div>
+                    )}
                   </div>
                 </div>
               </Card>
