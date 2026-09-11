@@ -82,34 +82,89 @@ const experiences = [
         </p>
       </div>
     ),
-    points: [],
+    points: ["天美旗下游戏产品海外发行支持", "海外社交媒体与社区运营", "海外玩家反馈整理", "社区内容排期与活动文案", "问卷活动与用户编号收集", "社区建设与运营流程优化"],
   },
   {
     company: "网易游戏",
     role: "海外市场实习生",
-    time: "2026 年 1 月至 5 月",
-    desc: "以海外社区运营、活动全流程执行和活动页面搭建为核心，参与海外游戏用户增长与内容生态建设。",
+    time: "2026 年 1 月至 4 月",
+    desc: (
+      <div className="space-y-4">
+        <p>以 Discord 全球社区运营为核心，参与海外用户增长、内容生态建设与商业化探索。</p>
+        <p>
+          <strong className="font-black text-[#2f241c]">《燕云十六声》社区运营：</strong>
+          参与搭建三方支付及积分商城闭环，第一季度累计拉动 Discord 侧 <strong className="font-black text-[#2f241c]">100 万元以上流水</strong>，核心频道发言任务数增长 <strong className="font-black text-[#2f241c]">259%</strong>；协助建立分层私信回流模型，触达 <strong className="font-black text-[#2f241c]">36.6 万</strong>流失玩家，实现 <strong className="font-black text-[#2f241c]">1.5 万人以上</strong>单次召回，7 至 14 天核心流失用户回流率达到 <strong className="font-black text-[#2f241c]">26.14%</strong>。
+        </p>
+        <p>
+          参与从 0 到 1 搭建“大鹅订阅号”双通道内容触达矩阵，获得近 <strong className="font-black text-[#2f241c]">3000 名</strong>高粘性订阅用户；主笔深度长图文 UGC 活动回应剧情争议，实现 <strong className="font-black text-[#2f241c]">95.8%</strong>的正向情感转化，为海外社区舆情管理提供缓冲。
+        </p>
+        <p>
+          <strong className="font-black text-[#2f241c]">《蛋仔派对》国际服运营：</strong>
+          结合派对游戏特性，参与策划“双人社交绑定”“节日阵营对抗”等活动，利用社区关系链带动端内活跃，活动期核心频道发言量环比提升 <strong className="font-black text-[#2f241c]">24.9%</strong>；结合海外热点及《小马宝莉》等 IP 联动，协助建立“主题周活动 + 玩家二创激励”机制，串联社区内容、端内游玩与作者获量。
+        </p>
+        <p>
+          <strong className="font-black text-[#2f241c]">《漫威争锋》运营支持：</strong>
+          利用网易积木完成营销活动网页前后端搭建，负责全链路用户行为数据埋点，为活动漏斗和转化率优化提供数据依据。
+        </p>
+      </div>
+    ),
     points: ["《漫威争锋》活动网页搭建与用户行为数据埋点", "《蛋仔派对》国际服主题周活动与玩家二创激励", "每月策划并撰写 20 余条本地化社区内容", "《燕云十六声》海外社区建设优化", "社区数据看板与每周分析报告", "后续活动参与率提升约 15%"],
   },
   {
     company: "深圳新东方",
     role: "新媒体运营实习生",
     time: "2025 年 10 月至 2026 年 1 月",
-    desc: "负责微信公众号与小红书账号内容运营，通过推文、笔记和平台内容优化获取阅读、互动与潜在客户。",
+    desc: (
+      <div className="space-y-4">
+        <p>负责垂直社交媒体矩阵运营，围绕内容选题、账号增长和留资转化开展微信公众号及小红书运营。</p>
+        <p>
+          <strong className="font-black text-[#2f241c]">矩阵规划与内容打造：</strong>
+          负责小红书“屠鸭计划”与微信公众号运营，策划产出 <strong className="font-black text-[#2f241c]">40 余篇</strong>图文内容，累计获得 <strong className="font-black text-[#2f241c]">2 万以上曝光</strong>；通过测试封面和文案表达，打造单篇 <strong className="font-black text-[#2f241c]">150 余次收藏</strong>的高表现笔记。
+        </p>
+        <p>
+          <strong className="font-black text-[#2f241c]">线索孵化与转化：</strong>
+          通过评论区互动和私信引导建立标准化留资路径，将内容流量转化为高意向潜在客户线索。
+        </p>
+      </div>
+    ),
     points: ["独立运营“大学城 weekly”微信公众号", "撰写发布 20 余篇推文，累计阅读量超过 1 万", "运营“深圳大学生屠鸭计划”小红书账号", "发布 20 余篇内容，获赞超过 2000，阅读量超过 1 万", "新增关注用户超过 100 人"],
   },
   {
     company: "极氪",
     role: "市场运营实习生",
     time: "2025 年 7 月至 10 月",
-    desc: "参与汽车门店市场运营、内容策划、线索收集、客户转化与区域市场数据分析。",
+    desc: (
+      <div className="space-y-4">
+        <p>聚焦线上线下整合营销与区域市场洞察，通过内容运营和线下渠道拓展支持销售转化。</p>
+        <p>
+          <strong className="font-black text-[#2f241c]">线上内容与销售转化：</strong>
+          统筹运营汽车之家、懂车帝及抖音等平台内容矩阵，策划垂类专栏与短视频内容，获得 <strong className="font-black text-[#2f241c]">1 万以上订阅与播放</strong>；将线上流量引导至线下门店，协助转化 <strong className="font-black text-[#2f241c]">50 余次试驾</strong>及 <strong className="font-black text-[#2f241c]">10 余笔成交</strong>，带动销售额超过 <strong className="font-black text-[#2f241c]">300 万元</strong>。
+        </p>
+        <p>
+          <strong className="font-black text-[#2f241c]">线下活动与市场调研：</strong>
+          协同落地 <strong className="font-black text-[#2f241c]">10 余场</strong>跨界异业合作及大型外展，筛选高意向线索 <strong className="font-black text-[#2f241c]">2000 余条</strong>；主笔完成 <strong className="font-black text-[#2f241c]">6 份</strong>商业洞察报告，并优化汽车金融报价测算表，后被采纳为深圳战区统一报价单模板。
+        </p>
+      </div>
+    ),
     points: ["负责懂车帝、汽车之家专栏内容规划，上线后订阅量超过 1 万", "转化潜在客户到店试驾 30 余人", "协助主播转化 50 余次试驾、促成 10 余笔成交", "总销售额超过 300 万元", "协同落地 10 余场外展、入企及异业活动", "累计收集并转化潜在客户线索超过 2000 条", "独立完成 6 份市场调研报告", "制作汽车与金融报价单，并成为深圳战区统一模板"],
   },
   {
     company: "深圳金泰谊电子",
     role: "市场运营顾问实习生",
     time: "2024 年 6 月至 8 月",
-    desc: "参与消费电子产品外展活动、客户沟通、竞品分析和市场报告，为公司产品宣传与销售目标提供支持。",
+    desc: (
+      <div className="space-y-4">
+        <p>围绕消费电子产品的线下推广、客户线索整理和竞品研究，为产品宣传与销售工作提供市场支持。</p>
+        <p>
+          <strong className="font-black text-[#2f241c]">线下推广与客户沟通：</strong>
+          参与 <strong className="font-black text-[#2f241c]">5 场</strong>线下活动，沟通客户超过 <strong className="font-black text-[#2f241c]">500 位</strong>，整理 <strong className="font-black text-[#2f241c]">300 余位</strong>潜在客户名单，并协助完成 5G 移动热点产品秋季订单任务。
+        </p>
+        <p>
+          <strong className="font-black text-[#2f241c]">竞品研究与市场建议：</strong>
+          分析 <strong className="font-black text-[#2f241c]">5 款以上</strong>竞品的功能特性与市场定位，整理市场报告并提出优化建议，协助品牌部门制定差异化营销策略。
+        </p>
+      </div>
+    ),
     points: ["参与 5 场线下活动", "沟通客户超过 500 位", "整理 300 余位潜在客户名单", "协助完成 5G 移动热点产品秋季订单任务", "分析 5 款以上竞品的功能特性与市场定位", "输出市场优化建议，协助品牌部门制定差异化营销策略"],
   },
 ];
