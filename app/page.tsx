@@ -25,15 +25,15 @@ const profileStats = [
   ["Tools", "Codex / VS Code / AI Workflow"],
 ];
 
-const roleTags = ["Marketing Student", "Product Operation", "Overseas Growth", "AI Builder"];
-const keywords = ["市场增长", "社区运营", "Vibe Coding", "海外营销", "个人产品", "AI Workflow"];
+const roleTags = ["市场营销学生", "产品运营", "海外增长", "Vibe Coding Builder"];
+const keywords = ["市场增长", "社区运营", "海外营销", "内容策略", "个人产品", "Vibe Coding"];
 
 const projects = [
   {
     title: "Insta360 Intelligence",
     type: "Overseas Growth / Market Intelligence / API Dashboard",
     desc: "一个面向海外增长和营销决策的实时情报系统。它通过 API 自动获取公开市场数据，并经过关键词过滤、质量评分和策略归纳，自动抓取和筛选海外市场中与 Insta360、GoPro、DJI、运动相机、360 相机相关的公开信息，把零散的新闻、竞品信号和创作者内容整理成一个可以快速判断方向的工作台。",
-    highlights: ["API 自动获取公开市场数据", "关键词过滤与质量评分", "竞品、新闻、创作者内容监测", "将零散信息转化为市场判断和行动建议", "已沉淀可复用 Dashboard Workflow"],
+    highlights: ["API 自动获取公开市场数据", "关键词过滤与质量评分", "竞品、新闻、创作者内容监测", "将零散信息转化为市场判断和行动建议", "沉淀可复用的市场情报看板方法"],
     href: "/insta360/",
     visual: "/assets/scene-code.png",
   },
@@ -49,7 +49,7 @@ const projects = [
     title: "Interactive Campaign Lab",
     type: "Quiz / H5 Campaign / Community Engagement",
     desc: "一组面向线上活动和社区传播的小型互动实验，包括类 MBTI 测试、角色匹配测试、活动页和问卷玩法。目标是快速验证轻量互动内容在社群传播、活动引流和用户参与中的复用价值。",
-    highlights: ["类 MBTI / 角色匹配测试", "适合社群传播的小型互动页", "可用于游戏社区、品牌活动、问卷引流", "快速部署到 GitHub Pages / Vercel", "运营活动经验可复用"],
+    highlights: ["类 MBTI / 角色匹配测试", "适合社群传播的小型互动页", "可用于游戏社区、品牌活动、问卷引流", "可快速落地为独立活动页面", "运营活动经验可复用"],
     href: "/quiz/",
     visual: "/assets/scene-journey.png",
   },
@@ -180,11 +180,11 @@ const hobbies = [
   ["跑步 / 健身", "保持每周运动习惯，用训练对抗焦虑和拖延。", "/assets/cascade-fullbody.png"],
   ["仓鼠大爷", "生活里的陪伴角色，也是个人网站里的温暖彩蛋。", "/assets/avatar-hamster.png"],
   ["阅读与思考", "保持阅读与记录，关注故事、叙事、人文和自我成长。", "/assets/element-learning.png"],
-  ["AI 工具探索", "持续学习 Codex、VS Code、AI Workflow，把想法变成可运行的小系统。", "/assets/element-coding.png"],
+  ["做小工具", "把实习和生活里遇到的具体问题，尝试做成可以直接使用的小工具。", "/assets/element-coding.png"],
   ["出海与全球市场", "关注海外增长、跨文化社区、全球消费品牌和游戏出海。", "/assets/clean-thinking.png"],
 ];
 
-const flow = ["Idea", "Prompt", "Code", "Preview", "Iterate", "Deploy"];
+const flow = [["想法", "Idea"], ["提示", "Prompt"], ["代码", "Code"], ["预览", "Preview"], ["迭代", "Iterate"], ["上线", "Deploy"]];
 const waterfall = [
   "/assets/cascade-neutral.png",
   "/assets/cascade-smile.png",
@@ -260,11 +260,28 @@ function Badge({ children }: { children: React.ReactNode }) {
 }
 
 export default function Home() {
+  const [expandedExperiences, setExpandedExperiences] = useState<number[]>([]);
+
+  const toggleExperience = (index: number) => {
+    setExpandedExperiences((current) => current.includes(index) ? current.filter((item) => item !== index) : [...current, index]);
+  };
+
   return (
-    <main className="relative min-h-screen overflow-hidden px-4 py-6 md:px-8">
+    <main id="top" className="relative min-h-screen overflow-x-clip px-4 py-6 md:px-8">
       <VisualWaterfall />
-      <div className="relative z-10 mx-auto max-w-[1200px] space-y-16">
-        <section className="relative grid min-h-[88vh] items-center gap-6 py-8 lg:grid-cols-[280px_1fr_260px]">
+      <a href="#content" className="sr-only z-[60] border-2 border-[#2f241c] bg-[#f6c453] px-4 py-2 font-black focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
+        跳到主要内容
+      </a>
+      <nav className="sticky top-3 z-50 mx-auto mb-8 max-w-[1200px] border-2 border-[#2f241c] bg-[#fff8e9]/95 shadow-pixel-sm backdrop-blur-sm" aria-label="页面导航">
+        <div className="flex items-center overflow-x-auto px-2 py-2 whitespace-nowrap">
+          <a href="#top" className="shrink-0 border-r-2 border-[#2f241c] px-3 py-1 font-black">BY</a>
+          {[["个人档案", "#profile"], ["精选项目", "#projects"], ["实习经历", "#experience"], ["个人世界", "#world"], ["联系我", "#contact"]].map(([label, href]) => (
+            <a key={href} href={href} className="shrink-0 px-3 py-1 text-sm font-bold transition-colors hover:bg-[#f6c453] focus-visible:bg-[#f6c453]">{label}</a>
+          ))}
+        </div>
+      </nav>
+      <div id="content" className="relative z-10 mx-auto max-w-[1200px] space-y-16">
+        <section className="relative grid min-h-[82vh] scroll-mt-24 items-center gap-6 py-8 lg:grid-cols-[280px_1fr_260px]">
           <div className="absolute left-6 top-8 rotate-[-8deg] border-2 border-[#2f241c] bg-[#f6c453] px-3 py-1 text-sm font-black shadow-pixel-sm">PLAYER INFO</div>
 
           <Card className="p-5">
@@ -284,10 +301,10 @@ export default function Home() {
           </Card>
 
           <div className="text-center lg:text-left">
-            <p className="mb-3 inline-block border-2 border-[#2f241c] bg-white px-3 py-1 text-sm font-black shadow-pixel-sm">市场营销学生 · 产品运营 · Vibe Coding Builder</p>
+            <p className="mb-3 inline-block border-2 border-[#2f241c] bg-white px-3 py-1 text-sm font-black shadow-pixel-sm">市场营销学生 · 产品运营 · 海外增长</p>
             <h1 className="text-5xl font-black leading-none md:text-7xl">个人网站</h1>
             <p className="mt-4 text-2xl font-bold">把想法做成能用的小系统。</p>
-            <p className="mt-4 max-w-2xl text-lg leading-8 text-[#5f5042]">我喜欢从真实问题出发：先把需求想清楚，再用运营经验、AI 工具和一点点代码，把它做成能跑、能看、能复用的东西。</p>
+            <p className="mt-4 max-w-2xl text-lg leading-8 text-[#5f5042]">我喜欢从真实问题出发：先把需求想清楚，再用运营经验和合适的工具，把它做成能跑、能看、能复用的东西。</p>
             <p className="mt-5 font-black">A System. A Story.<br />Building ideas, one pixel at a time.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-2 lg:justify-start">
               {roleTags.map((tag) => <Badge key={tag}>{tag}</Badge>)}
@@ -306,7 +323,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-3">
-            {["Projects 04", "Internships 05", "GPA 3.8/4.0", "Current Focus AI Workflow"].map((item) => (
+            {["项目 04", "实习经历 05", "GPA 3.8 / 4.0", "当前关注 海外增长"].map((item) => (
               <Card key={item} className="p-4 font-black transition hover:-translate-y-1">
                 <span className="mr-2 text-[#e89f38]">◆</span>{item}
               </Card>
@@ -317,18 +334,18 @@ export default function Home() {
         <section>
           <Card className="overflow-hidden p-3">
             <div className="mb-3 flex flex-wrap items-center justify-between gap-2 px-2">
-              <p className="font-black">BY World Archive</p>
+              <p className="font-black">BY 世界档案 / BY World Archive</p>
             </div>
             <img className="w-full border-2 border-[#2f241c] bg-[#f7edda] object-contain" src="/assets/by-world-banner.png" alt="BY 个人网站视觉海报" />
           </Card>
         </section>
 
-        <section>
-          <SectionTitle no="01" title="Personal Info" sub="基本信息 / Formal profile card" />
+        <section id="profile" className="scroll-mt-24">
+          <SectionTitle no="01" title="个人档案" sub="Personal Profile" />
           <Card className="grid gap-5 p-6 lg:grid-cols-[1fr_1.4fr]">
             <div>
               <h3 className="text-3xl font-black">李邦一 / BY</h3>
-              <p className="mt-2 leading-7 text-[#5f5042]">我现在在 XJTLU 学市场营销，主要关注海外增长、社区运营和产品运营。最近也在练习用 Codex 和 VS Code，把实习、生活里遇到的问题做成小工具。</p>
+              <p className="mt-2 leading-7 text-[#5f5042]">我现在在 XJTLU 学市场营销，主要关注海外增长、社区运营和产品运营。我习惯记录实习和生活里遇到的具体问题，再尝试把零散需求整理成可以直接使用的页面或工具。</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {keywords.map((item) => <Badge key={item}>{item}</Badge>)}
               </div>
@@ -345,18 +362,18 @@ export default function Home() {
           </Card>
         </section>
 
-        <section id="projects">
-          <SectionTitle no="02" title="Vibe Coding Projects" sub="一些从真实需求里长出来的小工具" />
+        <section id="projects" className="scroll-mt-24">
+          <SectionTitle no="02" title="精选项目" sub="Selected Work / 从真实需求里长出来的小工具" />
           <Card className="mb-5 p-5">
             <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
-              {flow.map((item) => <motion.div whileHover={{ y: -4 }} key={item} className="border-2 border-[#2f241c] bg-[#f6c453] p-3 text-center font-black shadow-pixel-sm">{item}</motion.div>)}
+              {flow.map(([label, english]) => <motion.div whileHover={{ y: -4 }} key={english} className="border-2 border-[#2f241c] bg-[#f6c453] p-3 text-center font-black shadow-pixel-sm"><span className="block">{label}</span><span className="mt-1 block text-[10px] font-bold text-[#685845]">{english}</span></motion.div>)}
             </div>
           </Card>
           <div className="grid gap-5 md:grid-cols-2">
             {projects.map((project, index) => (
               <Card key={project.title} className="flex flex-col p-5 transition hover:-translate-y-1">
                 <div className="mb-4 flex items-center justify-between">
-                  <Badge>PROJECT {index + 1}</Badge>
+                  <Badge>项目 {String(index + 1).padStart(2, "0")}</Badge>
                   <span className="text-2xl">▣</span>
                 </div>
                 <div className="mb-4 flex h-48 items-center justify-center border-2 border-[#2f241c] bg-[#f7edda] p-3">
@@ -368,16 +385,16 @@ export default function Home() {
                 <ul className="mt-4 grid gap-2">
                   {project.highlights.map((item) => <li key={item} className="border-l-4 border-[#e89f38] bg-[#f7edda] px-3 py-2 text-sm font-bold">{item}</li>)}
                 </ul>
-                <a className="mt-5 w-fit border-2 border-[#2f241c] bg-white px-4 py-2 font-black shadow-pixel-sm transition hover:bg-[#e89f38]" href={project.href ?? "#"}>
-                  {project.href ? "Open ↗" : "Coming Soon"}
+                <a className="mt-5 w-fit border-2 border-[#2f241c] bg-white px-4 py-2 font-black shadow-pixel-sm transition hover:bg-[#e89f38]" href={project.href ?? "#"} target="_blank" rel="noreferrer">
+                  {project.href ? "打开项目 ↗" : "即将上线"}
                 </a>
               </Card>
             ))}
           </div>
         </section>
 
-        <section>
-          <SectionTitle no="03" title="实习经历" sub="真实业务中的运营实践" />
+        <section id="experience" className="scroll-mt-24">
+          <SectionTitle no="03" title="实习经历" sub="Experience / 真实业务中的运营实践" />
           <div className="space-y-5">
             {experiences.map((item, index) => (
               <Card key={`${item.company}-${item.time}`} className="overflow-hidden">
@@ -391,10 +408,20 @@ export default function Home() {
                     <p className="font-black text-[#9b5f16]">{item.role}</p>
                   </div>
                   {item.direction && <p className="mt-2 text-sm font-bold text-[#685845]">{item.direction}</p>}
+                  <button
+                    type="button"
+                    className="mt-4 inline-flex items-center gap-2 border-2 border-[#2f241c] bg-[#fff8e9] px-3 py-2 text-sm font-black shadow-pixel-sm md:hidden"
+                    aria-expanded={expandedExperiences.includes(index)}
+                    aria-controls={`experience-detail-${index}`}
+                    onClick={() => toggleExperience(index)}
+                  >
+                    <span aria-hidden="true">{expandedExperiences.includes(index) ? "−" : "+"}</span>
+                    {expandedExperiences.includes(index) ? "收起完整经历" : "查看完整经历"}
+                  </button>
                 </div>
 
                 <div className="p-4 sm:p-6">
-                  <div className="max-w-[980px] text-[15px] leading-7 text-[#5f5042] sm:text-base sm:leading-8">{item.desc}</div>
+                  <div id={`experience-detail-${index}`} className={`${expandedExperiences.includes(index) ? "block" : "hidden"} max-w-[980px] text-[15px] leading-7 text-[#5f5042] sm:text-base sm:leading-8 md:block`}>{item.desc}</div>
                   {item.points.length > 0 && (
                     <div className="mt-6 border-t-2 border-dashed border-[#b99b72] pt-4">
                       <p className="mb-3 text-xs font-black text-[#9b5f16]">KEY OUTPUTS / 成果速览</p>
@@ -416,8 +443,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="world">
-          <SectionTitle no="04" title="Personal World" sub="兴趣、习惯与个人能量来源" />
+        <section id="world" className="scroll-mt-24">
+          <SectionTitle no="04" title="个人世界" sub="Personal World / 兴趣、习惯与能量来源" />
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {hobbies.map(([title, desc, src], index) => (
               <motion.div whileHover={{ rotate: index % 2 ? 2 : -2, y: -4 }} key={title} className="border-2 border-[#2f241c] bg-[#fff8e9] p-4 shadow-pixel-sm">
@@ -429,20 +456,20 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="pb-10">
-          <SectionTitle no="05" title="Contact & Resume" sub="联系我 / Let's build the next tiny system" />
+        <section id="contact" className="scroll-mt-24 pb-10">
+          <SectionTitle no="05" title="联系与简历" sub="Contact & Resume" />
           <Card className="p-6">
             <div className="grid gap-3 md:grid-cols-2">
-              <a className="font-black underline" href="mailto:vinbk361@gmail.com">Email: vinbk361@gmail.com</a>
-              <a className="font-black underline" href="tel:18123818973">Phone: 18123818973</a>
-              <a className="font-black underline" href="https://github.com/byoasis" target="_blank">GitHub: BYoasis</a>
-              <span className="font-black">Location: Suzhou / Shenzhen / Shanghai</span>
-              <span className="font-black">Resume: Coming Soon</span>
-              <span className="font-black">Feishu / Workflow Notes: Coming Soon</span>
+              <a className="font-black underline" href="mailto:vinbk361@gmail.com">邮箱：vinbk361@gmail.com</a>
+              <a className="font-black underline" href="tel:18123818973">电话：18123818973</a>
+              <a className="font-black underline" href="https://github.com/byoasis" target="_blank" rel="noreferrer">GitHub：BYoasis</a>
+              <span className="font-black">所在地：苏州 / 深圳 / 上海</span>
+              <span className="font-black">个人简历：准备中</span>
+              <span className="font-black">飞书笔记：准备中</span>
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a className="border-2 border-[#2f241c] bg-[#e89f38] px-4 py-2 font-black shadow-pixel-sm" href="#">下载简历 · Coming Soon</a>
-              <a className="border-2 border-[#2f241c] bg-white px-4 py-2 font-black shadow-pixel-sm" href="https://github.com/byoasis" target="_blank">查看 GitHub</a>
+              <span className="cursor-not-allowed border-2 border-[#2f241c] bg-[#e89f38] px-4 py-2 font-black opacity-60 shadow-pixel-sm" aria-disabled="true">简历准备中</span>
+              <a className="border-2 border-[#2f241c] bg-white px-4 py-2 font-black shadow-pixel-sm" href="https://github.com/byoasis" target="_blank" rel="noreferrer">查看 GitHub</a>
               <a className="border-2 border-[#2f241c] bg-white px-4 py-2 font-black shadow-pixel-sm" href="#projects">查看项目</a>
             </div>
           </Card>
